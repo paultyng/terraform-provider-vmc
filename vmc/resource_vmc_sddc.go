@@ -415,7 +415,7 @@ func resourceSddcRead(d *schema.ResourceData, m interface{}) error {
 		d.Set("sso_domain", *sddc.ResourceConfig.SsoDomain)
 		d.Set("skip_creating_vxlan", *sddc.ResourceConfig.SkipCreatingVxlan)
 		d.Set("provider_type", sddc.ResourceConfig.Provider)
-		d.Set("num_host", len(sddc.ResourceConfig.EsxHosts))
+		d.Set("num_host", getTotalSddcHosts(&sddc))
 		d.Set("vpc_cidr", *sddc.ResourceConfig.VpcInfo.VpcCidr)
 		skipCreatingVxLan := *sddc.ResourceConfig.SkipCreatingVxlan
 		if !skipCreatingVxLan {
