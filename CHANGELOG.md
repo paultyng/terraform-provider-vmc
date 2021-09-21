@@ -1,3 +1,9 @@
+## 1.7.1 (Sep 21, 2021)
+
+BUG FIXES: 
+
+ * Fix for Deprecated Property "esx_hosts" in SddcResourceConfig [\#112](https://github.com/vmware/terraform-provider-vmc/issues/112)
+
 ## 1.7.0 (Aug 5, 2021)
 
 ENHANCEMENT:
